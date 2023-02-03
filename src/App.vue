@@ -13,6 +13,9 @@
       <tbody>
         <tr v-for="(music, i) in musics" :key="music">
           <td>{{i+1}}</td>
+          <td>
+            <img :src="music.img" alt="">
+          </td>
           <td>{{music.title}}</td>
           <td>{{music.artist}}</td>
           <td>
@@ -33,6 +36,11 @@
       <a @click="page($event)">5</a>
     </span>
   </div>
+  <router-link to="/home">home</router-link>
+  <router-link to="/abuot">about</router-link>
+  <router-view>
+    <div class="test"></div>
+  </router-view>
 </template>
 
 <script>
